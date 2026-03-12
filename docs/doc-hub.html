@@ -293,7 +293,7 @@
                 docsIndex = await res.json();
                 renderSidebar();
                 const hash = location.hash.slice(1);
-                if (hash) {
+                if (hash && findDoc(hash)) {
                     loadDoc(hash);
                 } else {
                     renderIndex();
